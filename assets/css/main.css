@@ -93,6 +93,24 @@ h6 {
   h2 {
     font-size: 34px;
   }
+
+  h3 {
+    font-size: 30px;
+  }
+}
+
+@media (max-width: 575px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
+
+  h3 {
+    font-size: 24px;
+  }
 }
 
 h1 a,
@@ -503,6 +521,12 @@ ul {
   transform: translateX(0);
 }
 
+@media (max-width: 575px) {
+  .secondary-btn {
+    padding: 17px 24px;
+  }
+}
+
 /**----------------------------------------
 START: Header CSS
 ----------------------------------------*/
@@ -844,6 +868,18 @@ START: Banner CSS
   }
 }
 
+@media (max-width: 575px) {
+  .banner-main-wrapper .banner-title {
+    line-height: 46px;
+  }
+
+  .coundown-timer-wrap .countdown .timer-item .number {
+    width: 55px;
+    height: 55px;
+    font-size: 18px;
+  }
+}
+
 /* !END: Banner CSS *
 
 /**----------------------------------------
@@ -1004,6 +1040,11 @@ START: Feature CSS
   .feature-table-wrap {
     margin-top: 36px;
   }
+
+  .feature-table-wrap table tbody tr th:last-child,
+  .feature-table-wrap table tbody tr th:first-child {
+    border-radius: 0px 0px 0px 0px;
+  }
 }
 
 /* !END: Feature CSS *
@@ -1048,7 +1089,7 @@ START: Demo CSS
 .demo-item .demo-content {
   display: flex;
   column-gap: 48px;
-  row-gap: 35px;
+  row-gap: 30px;
 }
 
 .demo-item:nth-child(even) .demo-content {
@@ -1122,6 +1163,9 @@ START: Demo CSS
 }
 
 @media (max-width: 991px) {
+  .mobile-demo-main-wrapper {
+    display: block;
+  }
 
   .demo-item:nth-child(even) .demo-content,
   .demo-item .demo-content {
@@ -1139,8 +1183,47 @@ START: Demo CSS
   .demo-item:nth-child(3),
   .demo-item:nth-child(2),
   .demo-item {
-    position: relative;
     top: 0;
+  }
+}
+
+@media (max-width: 767px) {
+  .demo-area {
+    padding-bottom: 54px;
+  }
+
+  .demo-item {
+    border-radius: 0px;
+  }
+
+  .demo-item .demo-content .demo-images img {
+    border-radius: 0px;
+  }
+}
+
+@media (max-width: 575px) {
+  .demo-item {
+    border-radius: 0px;
+  }
+
+  .demo-item .demo-content .demo-images img {
+    height: auto;
+  }
+
+  .demo-item .demo-content .demo-text .demo-title {
+    line-height: 30px;
+  }
+
+  .demo-item .demo-content .demo-text .demo-desc {
+    margin-top: 15px;
+  }
+
+  .check-list ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .demo-item .demo-content .demo-text .demo-button {
+    margin-top: 30px;
   }
 }
 
@@ -1272,14 +1355,40 @@ START: Product CSS
   }
 }
 
-
 @media (max-width: 767px) {
   .product-slider-area {
     padding-bottom: 54px;
   }
 
+  .product-slider-item {
+    border-radius: 0px;
+  }
+
+  .product-slider-item .product-slider-images img {
+    border-radius: 0px;
+  }
+
   .product-slider-item .product-slider-content {
     padding: 23px 20px 0;
+  }
+
+  .product-slider-area .flickity-prev-next-button {
+    display: none;
+  }
+
+  .product-slider-area .heading-area .sec-title {
+    width: 100%;
+  }
+}
+
+@media (max-width: 575px) {
+  .product-slider-item {
+    width: 95%;
+    border-radius: 0px;
+  }
+
+  .product-slider-item .product-slider-content {
+    padding: 23px 15px 0;
   }
 }
 
@@ -1382,10 +1491,30 @@ START: Footer CSS
 @media (max-width: 991px) {
   .footer-area {
     padding-bottom: 100px;
+    overflow: hidden;
   }
 
   .footer-mian-wrapper {
     flex-direction: column;
+  }
+}
+
+@media (max-width: 767px) {
+  .feature-area {
+    padding-bottom: 54px;
+  }
+
+  .footer-item .footer-title {
+    font-size: 18px;
+  }
+
+  .footer-item .footer-title .active-color {
+    font-size: 26px;
+  }
+
+  .footer-item {
+    border-radius: 0px;
+    padding: 35px 15px;
   }
 }
 

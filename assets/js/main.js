@@ -1,3 +1,19 @@
+// Mobile Menu Js
+$(".mobile-bar").on("click", function () {
+  $(".mobile-menu-area").addClass("opened");
+  $(".body-overlay").addClass("opened");
+});
+$(".close-btn").on("click", function () {
+  $(".mobile-menu-area").removeClass("opened");
+  $(".body-overlay").removeClass("opened");
+  $(".mobile-bar").removeClass("on");
+});
+$(".body-overlay").on("click", function () {
+  $(".mobile-menu-area").removeClass("opened");
+  $(".body-overlay").removeClass("opened");
+  $(".mobile-bar").removeClass("on");
+});
+
 // Scroll JS
 document.querySelector(".banner-scroll").addEventListener("click", function(e) {
   e.preventDefault();
