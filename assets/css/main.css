@@ -71,6 +71,30 @@ h6 {
   font-size: 18px;
 }
 
+@media (max-width: 991px) {
+  h1 {
+    font-size: 55px;
+  }
+
+  h2 {
+    font-size: 38px;
+  }
+
+  h3 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: 45px;
+  }
+
+  h2 {
+    font-size: 34px;
+  }
+}
+
 h1 a,
 h2 a,
 h3 a,
@@ -541,6 +565,28 @@ START: Header CSS
   line-height: 18px;
 }
 
+@media (max-width: 1199px) {
+  .header-main-wrapper .header-menu-area {
+    column-gap: 30px;
+  }
+}
+
+@media (max-width: 991px) {
+  .header-area {
+    padding: 15px 0;
+  }
+
+  .nav-mainmenu ul {
+    display: none;
+  }
+}
+
+@media (max-width: 575px) {
+  .site-logo {
+    max-width: 175px;
+  }
+}
+
 /* !END: Header CSS *
 
 /**----------------------------------------
@@ -571,7 +617,14 @@ START: Banner CSS
   position: absolute;
   top: 0;
   left: 0;
+  height: 100%;
+  width: 100%;
   z-index: -1;
+}
+
+.banner-area .banner-shapes img {
+  width: 100%;
+  height: 100%;
 }
 
 .banner-main-wrapper {
@@ -686,7 +739,7 @@ START: Banner CSS
 .banner-main-wrapper .shapes-1 {
   position: absolute;
   top: 26%;
-  left: -22%;
+  left: -16%;
   animation: shakeY 2.5s ease-in-out infinite;
 }
 
@@ -735,6 +788,62 @@ START: Banner CSS
   animation: pulse 1s ease-in-out infinite;
 }
 
+@media (max-width: 1399px) {
+  .banner-main-wrapper .shapes-1 {
+    top: 24%;
+    left: -6%;
+  }
+
+  .banner-main-wrapper .shapes-2 {
+    right: -4%;
+  }
+
+  .banner-main-wrapper .circle-1 {
+    left: -10px;
+  }
+
+  .banner-main-wrapper .circle-2 {
+    right: 0;
+  }
+}
+
+@media (max-width: 1199px) {
+  .banner-main-wrapper .shapes-1 {
+    top: 35%;
+    left: 0%;
+  }
+
+  .banner-main-wrapper .shapes-2 {
+    right: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .banner-area {
+    padding-top: 164px;
+    padding-bottom: 90px;
+  }
+
+  .banner-area .shapes-wrap {
+    display: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .banner-area {
+    padding-top: 146px;
+    padding-bottom: 54px;
+  }
+
+  .banner-main-wrapper .banner-title {
+    line-height: 55px;
+  }
+
+  .banner-main-wrapper .banner-logo {
+    margin-bottom: 25px;
+  }
+}
+
 /* !END: Banner CSS *
 
 /**----------------------------------------
@@ -742,6 +851,7 @@ START: Feature CSS
 ----------------------------------------*/
 .feature-area {
   padding-bottom: 100px;
+  overflow: hidden;
 }
 
 .feature-area .heading-area .sec-title {
@@ -862,6 +972,40 @@ START: Feature CSS
   padding: 16px 16px 16px 0px;
 }
 
+@media (max-width: 1199px) {
+  .feature-table-wrap table tbody tr td {
+    padding: 16px 16px;
+  }
+
+  .feature-table-wrap table tbody tr th {
+    padding: 17px 16px;
+  }
+}
+
+@media (max-width: 991px) {
+  .feature-table-wrap table {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    flex-wrap: inherit;
+    white-space: nowrap;
+    scrollbar-color: #89C61D #89C61D;
+    scrollbar-width: thin;
+    padding-bottom: 10px;
+  }
+
+  .feature-table-wrap table tbody th:nth-child(4),
+  .feature-table-wrap table tbody tr td:nth-child(4) {
+    padding: 16px 16px;
+  }
+}
+
+@media (max-width: 767px) {
+  .feature-table-wrap {
+    margin-top: 36px;
+  }
+}
+
 /* !END: Feature CSS *
 
 /**----------------------------------------
@@ -904,6 +1048,7 @@ START: Demo CSS
 .demo-item .demo-content {
   display: flex;
   column-gap: 48px;
+  row-gap: 35px;
 }
 
 .demo-item:nth-child(even) .demo-content {
@@ -912,12 +1057,17 @@ START: Demo CSS
 
 .demo-item .demo-content .demo-images {
   display: flex;
-  max-width: 550px;
-  width: 100%;
 }
 
 .demo-item .demo-content .demo-images img {
   border-radius: 16px;
+  height: 450px;
+  object-fit: cover;
+  width: 100%;
+}
+
+.demo-item .demo-content .demo-text {
+  max-width: 520px;
   width: 100%;
 }
 
@@ -960,13 +1110,49 @@ START: Demo CSS
   margin-top: 42px;
 }
 
+@media (max-width: 1199px) {
+  .demo-item {
+    padding: 35px 20px 40px;
+    border-radius: 30px;
+  }
+
+  .demo-item .demo-content {
+    column-gap: 25px;
+  }
+}
+
+@media (max-width: 991px) {
+
+  .demo-item:nth-child(even) .demo-content,
+  .demo-item .demo-content {
+    flex-direction: column;
+  }
+
+  .demo-item .demo-content .demo-text {
+    max-width: 100%;
+  }
+
+  .demo-item .demo-sec-title {
+    margin-bottom: 30px;
+  }
+
+  .demo-item:nth-child(3),
+  .demo-item:nth-child(2),
+  .demo-item {
+    position: relative;
+    top: 0;
+  }
+}
+
 /* !END: Demo CSS *
 
 /**----------------------------------------
 START: Product CSS
 ----------------------------------------*/
 .product-slider-area {
+  position: relative;
   padding-bottom: 83px;
+  overflow: hidden;
 }
 
 .product-slider-area .heading-area {
@@ -1070,6 +1256,33 @@ START: Product CSS
   margin-top: 30px;
 }
 
+@media (max-width: 1199px) {
+  .product-slider-item {
+    width: 54%;
+  }
+}
+
+@media (max-width: 991px) {
+  .product-slider-area .flickity-prev-next-button {
+    top: -80px;
+  }
+
+  .product-slider-item {
+    width: 75%;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .product-slider-area {
+    padding-bottom: 54px;
+  }
+
+  .product-slider-item .product-slider-content {
+    padding: 23px 20px 0;
+  }
+}
+
 /* !END: Product CSS *
 
 /**----------------------------------------
@@ -1099,7 +1312,8 @@ START: Footer CSS
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 20px;
+  gap: 20px;
+
 }
 
 .footer-item {
@@ -1163,6 +1377,16 @@ START: Footer CSS
 
 .footer-item .footer-button {
   margin-top: 24px;
+}
+
+@media (max-width: 991px) {
+  .footer-area {
+    padding-bottom: 100px;
+  }
+
+  .footer-mian-wrapper {
+    flex-direction: column;
+  }
 }
 
 /* Keyframes CSS */
