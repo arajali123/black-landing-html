@@ -358,6 +358,10 @@ ul {
   color: #ffffff;
 }
 
+.header-btn:focus {
+  color: #ffffff;
+}
+
 .header-btn::before {
   position: absolute;
   content: "";
