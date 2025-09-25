@@ -17,15 +17,16 @@ $(".body-overlay").on("click", function () {
 // Scroll JS
 document.querySelector(".banner-scroll").addEventListener("click", function(e) {
   e.preventDefault();
-  const headerOffset = 100; // navbar height
+  const headerOffset = 10;
   const element = document.querySelector("#feature-area");
-  const offsetPosition = element.offsetTop - headerOffset;
+  const offsetPosition = element.offsetTop - headerOffset + 320;
 
   window.scrollTo({
     top: offsetPosition,
     behavior: "smooth"
   });
 });
+
 
 // Timer Js
 const __days = document.querySelector("#days");
@@ -65,7 +66,6 @@ function formatTime(time) {
   return time.toString().padStart(2, "0");
 }
 
-// শুধু শেষের ২ digit দেখানোর জন্য
 function formatDays(days) {
   const lastTwo = days % 100; 
   return lastTwo.toString().padStart(2, "0");
