@@ -527,6 +527,90 @@ ul {
   }
 }
 
+
+/**----------------------------------------
+START: Header Mobile CSS
+----------------------------------------*/
+.body-overlay {
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9999;
+  left: 0;
+  opacity: 0;
+  visibility: hidden;
+  background: rgba(137, 198, 29, 0.5);
+  transition: all 0.3s ease-out 0s;
+}
+
+.body-overlay.opened {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-menu-area {
+  position: fixed;
+  right: -490px;
+  top: 0;
+  width: 450px;
+  height: 100%;
+  z-index: 9999;
+  scrollbar-width: none;
+  background-color: #090909;
+  overflow-y: scroll;
+  transition: all 0.3s ease-out 0s;
+}
+
+.mobile-menu-area.opened {
+  right: 0;
+}
+
+.mobile-main-wrapper .mobile-menu-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  padding: 15px 20px;
+}
+
+.mobile-main-wrapper .title {
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.mobile-main-wrapper .close-btn svg path {
+  fill: #ffffff;
+}
+
+.mobile-main-wrapper .nav-mobile-menu {
+  padding: 15px 20px;
+}
+
+.mobile-main-wrapper .nav-mobile-menu ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.mobile-main-wrapper .nav-mobile-menu ul li a {
+  font-size: 18px;
+  color: #ffffff;
+}
+
+.mobile-toggle .mobile-bar {
+  display: flex;
+}
+
+@media (max-width: 991px) {
+  .mobile-menu-area {
+    width: 320px;
+  }
+}
+
 /**----------------------------------------
 START: Header CSS
 ----------------------------------------*/
@@ -555,6 +639,12 @@ START: Header CSS
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+
+.header-main-wrapper .header-infos {
+  display: flex;
+  align-items: center;
+  column-gap: 20px;
 }
 
 .header-main-wrapper .header-menu-area {
@@ -589,6 +679,10 @@ START: Header CSS
   line-height: 18px;
 }
 
+.mobile-toggle {
+  display: none;
+}
+
 @media (max-width: 1199px) {
   .header-main-wrapper .header-menu-area {
     column-gap: 30px;
@@ -600,8 +694,13 @@ START: Header CSS
     padding: 15px 0;
   }
 
+  .header-button,
   .nav-mainmenu ul {
     display: none;
+  }
+
+  .mobile-toggle {
+    display: block;
   }
 }
 
@@ -957,12 +1056,13 @@ START: Feature CSS
 .feature-table-wrap table tbody tr td:nth-child(1) .subtitle {
   color: #000000;
   font-size: 14px;
+  justify-content: center;
   font-weight: 600;
   background: #FBC101;
   padding: 8px 40px;
   position: absolute;
-  top: 16px;
-  left: -35px;
+  top: 25px;
+  left: -75px;
   transform: rotate(-45deg);
   line-height: 1;
 }
@@ -985,27 +1085,49 @@ START: Feature CSS
 
 .feature-table-wrap table tbody th:nth-child(1),
 .feature-table-wrap table tbody tr td:nth-child(1) {
-  width: 325px;
+  width: 345px;
   text-align: left;
 }
 
 .feature-table-wrap table tbody th:nth-child(2),
 .feature-table-wrap table tbody tr td:nth-child(2) {
-  width: 395px;
+  width: 295px;
   text-align: left;
 }
 
 .feature-table-wrap table tbody th:nth-child(3),
 .feature-table-wrap table tbody tr td:nth-child(3) {
-  width: 425px;
+  width: 300px;
   text-align: left;
 }
 
 .feature-table-wrap table tbody th:nth-child(4),
 .feature-table-wrap table tbody tr td:nth-child(4) {
-  width: 295px;
+  width: 348px;
   text-align: center;
   padding: 16px 16px 16px 0px;
+}
+
+.feature-table-wrap table tbody tr td:nth-child(1) span {
+  display: flex;
+  max-width: 230px;
+  width: 100%;
+}
+
+.feature-table-wrap table tbody tr td:nth-child(1) .img-2 {
+  max-width: 204px;
+}
+
+.feature-table-wrap table tbody tr td:nth-child(1) .img-3 {
+  max-width: 169px;
+}
+
+.feature-table-wrap table tbody tr td:nth-child(1) .img-4 {
+  max-width: 86px;
+}
+
+.feature-table-wrap table tbody tr td:nth-child(1) span img {
+  width: 100%;
 }
 
 @media (max-width: 1199px) {
@@ -1033,6 +1155,11 @@ START: Feature CSS
   .feature-table-wrap table tbody th:nth-child(4),
   .feature-table-wrap table tbody tr td:nth-child(4) {
     padding: 16px 16px;
+  }
+
+  .feature-table-wrap table tbody tr td:nth-child(1) .subtitle {
+    top: 20px;
+    left: -50px;
   }
 }
 
@@ -1102,7 +1229,7 @@ START: Demo CSS
 
 .demo-item .demo-content .demo-images img {
   border-radius: 16px;
-  height: 450px;
+  height: 395px;
   object-fit: cover;
   width: 100%;
 }
@@ -1441,7 +1568,7 @@ START: Footer CSS
   position: absolute;
   right: -15px;
   bottom: -15px;
-  opacity: 0.3;
+  opacity: 0.9;
 }
 
 .footer-item .sub-title {
@@ -1473,11 +1600,15 @@ START: Footer CSS
 
 .footer-item .footer-logo {
   display: flex;
-  max-width: 182px;
+  max-width: 261px;
   width: 100%;
   margin-left: auto;
   margin-right: auto;
   margin-top: 24px;
+}
+
+.footer-item:first-child .footer-logo {
+  max-width: 182px;
 }
 
 .footer-item .footer-logo img {
