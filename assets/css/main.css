@@ -420,7 +420,7 @@ ul {
   color: #000000;
   font-weight: 600;
   font-size: 16px;
-  background: #F8FF40;
+  background: #000000;
   border-radius: 33px;
   padding: 22px 40px;
   text-align: center;
@@ -430,6 +430,7 @@ ul {
 }
 
 .secondary-btn span {
+  color: #000000;
   position: relative;
   z-index: 2;
 }
@@ -450,18 +451,22 @@ ul {
   transform: translate3d(100%, 0, 0);
 }
 
+.secondary-btn:hover span {
+  color: #ffffff;
+}
+
 .secondary-btn.btn-1 {
   color: #ffffff;
-  background: #F8FF40;
+  background: #dc3545;
   padding: 17px 24px;
+}
+
+.secondary-btn.btn-1 span {
+  color: #ffffff;
 }
 
 .secondary-btn.btn-1::before {
   background: #171717;
-}
-
-.secondary-btn.btn-1:hover span {
-  color: #000000;
 }
 
 .primary-btn {
